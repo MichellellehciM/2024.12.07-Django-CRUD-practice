@@ -1,0 +1,14 @@
+{% extends "shared/layout.html" %} {% block "content" %}
+
+<h1>Title:{{resume.title}}</h1>
+<h1>skill:{{resume.skill}}</h1>
+<p>content:{{resume.content}}</p>
+
+<footer>
+    <a href="{% url "resumes:edit" resume.id %}">edit</a>
+    <a href="{% url "resumes:delete" resume.id %}">delete</a>
+
+</footer>
+
+
+{% endblock %}

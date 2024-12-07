@@ -1,0 +1,11 @@
+{% extends "shared/layout.html" %} {% block "content" %}
+
+<h1>new resume</h1>
+
+<form method="POST" action="{% url "resumes:home" %}">
+  {% csrf_token %} {{form.as_p}}
+
+  <button>add</button>
+</form>
+
+{% endblock %}
